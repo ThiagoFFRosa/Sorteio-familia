@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio Família</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorteio Família</h1>
+    <p>Digite o código que você recebeu:</p>
+    <input type="text" id="codigo" placeholder="Digite o código aqui">
+    <button onclick="redirecionar()">Acessar</button>
+
+    <script>
+        function redirecionar() {
+            const codigo = document.getElementById('codigo').value;
+            if (codigo) {
+                window.location.href = `https://thiagoffrosa.github.io/Sorteio-familia/${codigo}.html`;
+            } else {
+                alert("Por favor, insira um código válido.");
+            }
+        }
+    </script>
+</body>
+</html>
